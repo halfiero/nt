@@ -2,27 +2,79 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Подключение к Survival Odyssey</title>
-    <meta http-equiv="refresh" content="2;url=dayz://connect/109.248.4.63:2302">
+    <title>Подключение — Survival Odyssey</title>
     <style>
-        body { font-family: sans-serif; background: #1a1a1a; color: #fff;
-               display: flex; align-items: center; justify-content: center;
-               height: 100vh; margin: 0; }
-        .box { text-align: center; }
-        h2 { color: #e74c3c; }
-        a { color: #e74c3c; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .box {
+            text-align: center;
+            padding: 40px;
+            max-width: 500px;
+        }
+        h2 { color: #e74c3c; font-size: 1.6em; margin-bottom: 10px; }
+        p { color: #aaa; margin-bottom: 24px; }
+        .btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 32px;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: #c0392b; }
+        .manual {
+            background: #2a2a2a;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: left;
+        }
+        .manual h3 { color: #e74c3c; margin-bottom: 12px; font-size: 0.95em; }
+        .manual ol { padding-left: 18px; color: #ccc; line-height: 2; }
+        .ip {
+            background: #111;
+            border: 1px solid #444;
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-family: monospace;
+            color: #e74c3c;
+            user-select: all;
+        }
     </style>
 </head>
 <body>
     <div class="box">
         <h2>🎮 Survival Odyssey: Rise of the Dead</h2>
-        <p>Открываем DayZ Launcher, подождите...</p>
-        <p><small>Если ничего не произошло —
-            <a href="dayz://connect/109.248.4.63:2302">нажмите здесь</a>
-        </small></p>
+        <p>Нажмите кнопку ниже для подключения через DayZ Launcher</p>
+
+        <a class="btn" href="dayz://connect/109.248.4.63:2302">
+            🚀 Подключиться к серверу
+        </a>
+
+        <div class="manual">
+            <h3>⚠️ Если кнопка не сработала — подключитесь вручную:</h3>
+            <ol>
+                <li>Откройте <strong>DayZ Launcher</strong></li>
+                <li>Перейдите в раздел <strong>«Серверы»</strong></li>
+                <li>Нажмите <strong>«Прямое подключение»</strong></li>
+                <li>Введите IP: <span class="ip">109.248.4.63</span></li>
+                <li>Введите порт: <span class="ip">2302</span></li>
+            </ol>
+        </div>
     </div>
     <script>
-        setTimeout(() => { window.location.href = 'dayz://connect/109.248.4.63:2302'; }, 500);
+        setTimeout(() => { window.location.href = 'dayz://connect/109.248.4.63:2302'; }, 800);
     </script>
 </body>
 </html>
